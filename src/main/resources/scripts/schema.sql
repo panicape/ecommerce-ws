@@ -1,15 +1,15 @@
 create user TEST_USER PASSWORD 'TEST_USER';
 CREATE SCHEMA SMART_ASSETS AUTHORIZATION TEST_USER;
 create table BRAND (
-    ID int,
+    BRAND_ID int,
     NAME varchar(255),
-    DATE_CREATE varchar(10),
-    DATE_UPDATE varchar(10),
-    PRIMARY KEY (ID)
+    DATE_CREATE varchar(100),
+    DATE_UPDATE varchar(100),
+    PRIMARY KEY (BRAND_ID)
 );
 
 create table PRODUCT (
-    PROD_ID integer,
+    PROD_ID int,
     NAME varchar(255),
     DATE_CREATE varchar(100),
     DATE_UPDATE varchar(100),
@@ -26,5 +26,6 @@ create table PRICES (
     PRIORITY int,
     PRICE float,
     PRIMARY KEY (P_ID),
-    FOREIGN KEY (P_BRAND_ID) REFERENCES BRAND(ID)
+    FOREIGN KEY (P_BRAND_ID) REFERENCES BRAND(BRAND_ID),
+    FOREIGN KEY (P_PROD_ID) REFERENCES PRODUCT(PROD_ID)
 );

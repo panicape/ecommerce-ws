@@ -1,4 +1,4 @@
-insert into BRAND(ID, NAME, DATE_CREATE, DATE_UPDATE) values (1, 'ZARA', '11/11/2020', '11/11/2020');
+insert into BRAND(BRAND_ID, NAME, DATE_CREATE, DATE_UPDATE) values (1, 'ZARA', '11/11/2020', '11/11/2020');
 
 insert into PRODUCT(PROD_ID, NAME , DATE_CREATE , DATE_UPDATE)
     values(35455, 'T-Shirt', '2020-06-14-00.00.00', '2020-06-14-00.00.00');
